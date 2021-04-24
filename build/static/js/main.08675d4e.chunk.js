@@ -1,2 +1,0 @@
-(this["webpackJsonpfetchkar-vanilla"]=this["webpackJsonpfetchkar-vanilla"]||[]).push([[0],{9:function(e,t,c){"use strict";c.r(t);var n=c(1),a=c(3),r=c.n(a),s=c(0);function i(){return Object(s.jsxs)("div",{className:"App",children:[Object(s.jsx)("h1",{children:"Hello CodeSandbox "}),Object(s.jsx)("h2",{children:" Start editing to see some magic happen! "})]})}var o=document.getElementById("root");r.a.render(Object(s.jsx)(n.StrictMode,{children:Object(s.jsx)(i,{})}),o)}},[[9,1,2]]]);
-//# sourceMappingURL=main.08675d4e.chunk.js.map
