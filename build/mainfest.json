@@ -1,0 +1,9 @@
+{
+    "name": "Taskkar",
+    "short_name": "Taskkar",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "task sharing app made to ease lifestyle.",
+    "icons": []
+  }
