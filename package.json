@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
+    "concurrently": "^6.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scripts": "4.0.0",
@@ -27,9 +28,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "node server/server.js",
+    "startall": "concurrently \"yarn start\" \"yarn server\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "mockserver": ""
   },
   "keywords": [
     "typescript",
