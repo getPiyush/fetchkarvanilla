@@ -27,7 +27,7 @@ function Copyright() {
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
                 Your Website
-      </Link>{' '}
+            </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
         </Typography>
@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Dashboard() {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -141,8 +141,8 @@ export default function Dashboard() {
                         <MenuIcon />
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                        Dashboard
-          </Typography>
+                        Taskker
+                    </Typography>
                     <IconButton color="inherit">
                         <Badge badgeContent={4} color="secondary">
                             <NotificationsIcon />
@@ -151,7 +151,7 @@ export default function Dashboard() {
                 </Toolbar>
             </AppBar>
             <Drawer
-                variant="permanent"
+                variant="temporary"
                 classes={{
                     paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
                 }}
@@ -169,31 +169,23 @@ export default function Dashboard() {
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
-                <Container maxWidth="lg" className={classes.container}>
-                    <Grid container spacing={3}>
-                        {/* Chart */}
-                        <Grid item xs={12} md={8} lg={9}>
-                            <Paper className={fixedHeightPaper}>
-                                <Table />
-                            </Paper>
-                        </Grid>
-                        {/* Recent Deposits */}
-                        <Grid item xs={12} md={4} lg={3}>
-                            <Paper className={fixedHeightPaper}>
-                                <Table />
-                            </Paper>
-                        </Grid>
-                        {/* Recent Orders */}
+                <Container maxWidth="xl" className={classes.container}>
+                    <Grid container spacing={3} direction={'column'}>
                         <Grid item xs={12}>
                             <Paper className={classes.paper}>
-                                <Table />
+                                <Table title="12, 8, 9" />
+                            </Paper>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Paper className={classes.paper}>
+                                <Table title="12, 4, 3" />
                             </Paper>
                         </Grid>
                     </Grid>
-                    <Box pt={4}>
-                        <Copyright />
-                    </Box>
                 </Container>
+                <Box pt={4}>
+                    <Copyright />
+                </Box>
             </main>
         </div>
     );
